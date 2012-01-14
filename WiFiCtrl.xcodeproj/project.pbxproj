@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C552F29146C04D7008EF6FE /* 01-arrow-east.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F19146C04D7008EF6FE /* 01-arrow-east.png */; };
+		7C552F2A146C04D7008EF6FE /* 01-arrow-east@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1A146C04D7008EF6FE /* 01-arrow-east@2x.png */; };
+		7C552F2B146C04D7008EF6FE /* 03-arrow-south.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1B146C04D7008EF6FE /* 03-arrow-south.png */; };
+		7C552F2C146C04D7008EF6FE /* 03-arrow-south@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1C146C04D7008EF6FE /* 03-arrow-south@2x.png */; };
+		7C552F2D146C04D7008EF6FE /* 05-arrow-west.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1D146C04D7008EF6FE /* 05-arrow-west.png */; };
+		7C552F2E146C04D7008EF6FE /* 05-arrow-west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1E146C04D7008EF6FE /* 05-arrow-west@2x.png */; };
+		7C552F2F146C04D7008EF6FE /* 07-arrow-north.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F1F146C04D7008EF6FE /* 07-arrow-north.png */; };
+		7C552F30146C04D7008EF6FE /* 07-arrow-north@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F20146C04D7008EF6FE /* 07-arrow-north@2x.png */; };
+		7C552F31146C04D7008EF6FE /* 09-arrows-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F21146C04D7008EF6FE /* 09-arrows-out.png */; };
+		7C552F32146C04D7008EF6FE /* 09-arrows-out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F22146C04D7008EF6FE /* 09-arrows-out@2x.png */; };
+		7C552F33146C04D7008EF6FE /* 11-x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F23146C04D7008EF6FE /* 11-x.png */; };
+		7C552F34146C04D7008EF6FE /* 11-x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F24146C04D7008EF6FE /* 11-x@2x.png */; };
+		7C552F35146C04D7008EF6FE /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F25146C04D7008EF6FE /* 19-gear.png */; };
+		7C552F36146C04D7008EF6FE /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C552F26146C04D7008EF6FE /* 19-gear@2x.png */; };
+		7C552F37146C04D7008EF6FE /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C552F28146C04D7008EF6FE /* AsyncUdpSocket.m */; };
+		7C552F42146C0561008EF6FE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C552F41146C0561008EF6FE /* CFNetwork.framework */; };
+		7C5D664914B967FF00E16F56 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D664814B967FF00E16F56 /* MySingleton.m */; };
+		7C859A7A146C0479002E853D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C859A79146C0479002E853D /* UIKit.framework */; };
+		7C859A7C146C0479002E853D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C859A7B146C0479002E853D /* Foundation.framework */; };
+		7C859A7E146C0479002E853D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C859A7D146C0479002E853D /* CoreGraphics.framework */; };
+		7C859A84146C0479002E853D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A82146C0479002E853D /* InfoPlist.strings */; };
+		7C859A87146C0479002E853D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C859A86146C0479002E853D /* main.m */; };
+		7C859A8A146C0479002E853D /* WiFiCtrlAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C859A89146C0479002E853D /* WiFiCtrlAppDelegate.m */; };
+		7C859A8D146C0479002E853D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A8B146C0479002E853D /* MainWindow.xib */; };
+		7C859A90146C0479002E853D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C859A8F146C0479002E853D /* FirstViewController.m */; };
+		7C859A93146C0479002E853D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C859A92146C0479002E853D /* SecondViewController.m */; };
+		7C859A96146C0479002E853D /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A94146C0479002E853D /* FirstView.xib */; };
+		7C859A99146C0479002E853D /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A97146C0479002E853D /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C552F19146C04D7008EF6FE /* 01-arrow-east.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-arrow-east.png"; sourceTree = "<group>"; };
+		7C552F1A146C04D7008EF6FE /* 01-arrow-east@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-arrow-east@2x.png"; sourceTree = "<group>"; };
+		7C552F1B146C04D7008EF6FE /* 03-arrow-south.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-arrow-south.png"; sourceTree = "<group>"; };
+		7C552F1C146C04D7008EF6FE /* 03-arrow-south@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-arrow-south@2x.png"; sourceTree = "<group>"; };
+		7C552F1D146C04D7008EF6FE /* 05-arrow-west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west.png"; sourceTree = "<group>"; };
+		7C552F1E146C04D7008EF6FE /* 05-arrow-west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-arrow-west@2x.png"; sourceTree = "<group>"; };
+		7C552F1F146C04D7008EF6FE /* 07-arrow-north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-arrow-north.png"; sourceTree = "<group>"; };
+		7C552F20146C04D7008EF6FE /* 07-arrow-north@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-arrow-north@2x.png"; sourceTree = "<group>"; };
+		7C552F21146C04D7008EF6FE /* 09-arrows-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-arrows-out.png"; sourceTree = "<group>"; };
+		7C552F22146C04D7008EF6FE /* 09-arrows-out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-arrows-out@2x.png"; sourceTree = "<group>"; };
+		7C552F23146C04D7008EF6FE /* 11-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-x.png"; sourceTree = "<group>"; };
+		7C552F24146C04D7008EF6FE /* 11-x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-x@2x.png"; sourceTree = "<group>"; };
+		7C552F25146C04D7008EF6FE /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		7C552F26146C04D7008EF6FE /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
+		7C552F27146C04D7008EF6FE /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		7C552F28146C04D7008EF6FE /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		7C552F41146C0561008EF6FE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7C5D664714B967FF00E16F56 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
+		7C5D664814B967FF00E16F56 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
+		7C859A75146C0479002E853D /* WiFiCtrl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiCtrl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C859A79146C0479002E853D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7C859A7B146C0479002E853D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C859A7D146C0479002E853D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7C859A81146C0479002E853D /* WiFiCtrl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WiFiCtrl-Info.plist"; sourceTree = "<group>"; };
+		7C859A83146C0479002E853D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C859A85146C0479002E853D /* WiFiCtrl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiFiCtrl-Prefix.pch"; sourceTree = "<group>"; };
+		7C859A86146C0479002E853D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C859A88146C0479002E853D /* WiFiCtrlAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WiFiCtrlAppDelegate.h; sourceTree = "<group>"; };
+		7C859A89146C0479002E853D /* WiFiCtrlAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WiFiCtrlAppDelegate.m; sourceTree = "<group>"; };
+		7C859A8C146C0479002E853D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7C859A8E146C0479002E853D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		7C859A8F146C0479002E853D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7C859A91146C0479002E853D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7C859A92146C0479002E853D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7C859A95146C0479002E853D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		7C859A98146C0479002E853D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C859A72146C0479002E853D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C552F42146C0561008EF6FE /* CFNetwork.framework in Frameworks */,
+				7C859A7A146C0479002E853D /* UIKit.framework in Frameworks */,
+				7C859A7C146C0479002E853D /* Foundation.framework in Frameworks */,
+				7C859A7E146C0479002E853D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C552F38146C04E1008EF6FE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7C552F19146C04D7008EF6FE /* 01-arrow-east.png */,
+				7C552F1A146C04D7008EF6FE /* 01-arrow-east@2x.png */,
+				7C552F1B146C04D7008EF6FE /* 03-arrow-south.png */,
+				7C552F1C146C04D7008EF6FE /* 03-arrow-south@2x.png */,
+				7C552F1D146C04D7008EF6FE /* 05-arrow-west.png */,
+				7C552F1E146C04D7008EF6FE /* 05-arrow-west@2x.png */,
+				7C552F1F146C04D7008EF6FE /* 07-arrow-north.png */,
+				7C552F20146C04D7008EF6FE /* 07-arrow-north@2x.png */,
+				7C552F21146C04D7008EF6FE /* 09-arrows-out.png */,
+				7C552F22146C04D7008EF6FE /* 09-arrows-out@2x.png */,
+				7C552F23146C04D7008EF6FE /* 11-x.png */,
+				7C552F24146C04D7008EF6FE /* 11-x@2x.png */,
+				7C552F25146C04D7008EF6FE /* 19-gear.png */,
+				7C552F26146C04D7008EF6FE /* 19-gear@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		7C859A6A146C0479002E853D = {
+			isa = PBXGroup;
+			children = (
+				7C859A7F146C0479002E853D /* WiFiCtrl */,
+				7C859A78146C0479002E853D /* Frameworks */,
+				7C859A76146C0479002E853D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C859A76146C0479002E853D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C859A75146C0479002E853D /* WiFiCtrl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C859A78146C0479002E853D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C552F41146C0561008EF6FE /* CFNetwork.framework */,
+				7C859A79146C0479002E853D /* UIKit.framework */,
+				7C859A7B146C0479002E853D /* Foundation.framework */,
+				7C859A7D146C0479002E853D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C859A7F146C0479002E853D /* WiFiCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				7C552F38146C04E1008EF6FE /* Images */,
+				7C552F27146C04D7008EF6FE /* AsyncUdpSocket.h */,
+				7C552F28146C04D7008EF6FE /* AsyncUdpSocket.m */,
+				7C859A88146C0479002E853D /* WiFiCtrlAppDelegate.h */,
+				7C859A89146C0479002E853D /* WiFiCtrlAppDelegate.m */,
+				7C859A8B146C0479002E853D /* MainWindow.xib */,
+				7C859A8E146C0479002E853D /* FirstViewController.h */,
+				7C859A8F146C0479002E853D /* FirstViewController.m */,
+				7C859A91146C0479002E853D /* SecondViewController.h */,
+				7C859A92146C0479002E853D /* SecondViewController.m */,
+				7C859A94146C0479002E853D /* FirstView.xib */,
+				7C859A97146C0479002E853D /* SecondView.xib */,
+				7C859A80146C0479002E853D /* Supporting Files */,
+				7C5D664714B967FF00E16F56 /* MySingleton.h */,
+				7C5D664814B967FF00E16F56 /* MySingleton.m */,
+			);
+			path = WiFiCtrl;
+			sourceTree = "<group>";
+		};
+		7C859A80146C0479002E853D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C859A81146C0479002E853D /* WiFiCtrl-Info.plist */,
+				7C859A82146C0479002E853D /* InfoPlist.strings */,
+				7C859A85146C0479002E853D /* WiFiCtrl-Prefix.pch */,
+				7C859A86146C0479002E853D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C859A74146C0479002E853D /* WiFiCtrl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C859A9C146C0479002E853D /* Build configuration list for PBXNativeTarget "WiFiCtrl" */;
+			buildPhases = (
+				7C859A71146C0479002E853D /* Sources */,
+				7C859A72146C0479002E853D /* Frameworks */,
+				7C859A73146C0479002E853D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiCtrl;
+			productName = WiFiCtrl;
+			productReference = 7C859A75146C0479002E853D /* WiFiCtrl.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C859A6C146C0479002E853D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = JP1971;
+			};
+			buildConfigurationList = 7C859A6F146C0479002E853D /* Build configuration list for PBXProject "WiFiCtrl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7C859A6A146C0479002E853D;
+			productRefGroup = 7C859A76146C0479002E853D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C859A74146C0479002E853D /* WiFiCtrl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C859A73146C0479002E853D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C859A84146C0479002E853D /* InfoPlist.strings in Resources */,
+				7C859A8D146C0479002E853D /* MainWindow.xib in Resources */,
+				7C859A96146C0479002E853D /* FirstView.xib in Resources */,
+				7C859A99146C0479002E853D /* SecondView.xib in Resources */,
+				7C552F29146C04D7008EF6FE /* 01-arrow-east.png in Resources */,
+				7C552F2A146C04D7008EF6FE /* 01-arrow-east@2x.png in Resources */,
+				7C552F2B146C04D7008EF6FE /* 03-arrow-south.png in Resources */,
+				7C552F2C146C04D7008EF6FE /* 03-arrow-south@2x.png in Resources */,
+				7C552F2D146C04D7008EF6FE /* 05-arrow-west.png in Resources */,
+				7C552F2E146C04D7008EF6FE /* 05-arrow-west@2x.png in Resources */,
+				7C552F2F146C04D7008EF6FE /* 07-arrow-north.png in Resources */,
+				7C552F30146C04D7008EF6FE /* 07-arrow-north@2x.png in Resources */,
+				7C552F31146C04D7008EF6FE /* 09-arrows-out.png in Resources */,
+				7C552F32146C04D7008EF6FE /* 09-arrows-out@2x.png in Resources */,
+				7C552F33146C04D7008EF6FE /* 11-x.png in Resources */,
+				7C552F34146C04D7008EF6FE /* 11-x@2x.png in Resources */,
+				7C552F35146C04D7008EF6FE /* 19-gear.png in Resources */,
+				7C552F36146C04D7008EF6FE /* 19-gear@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C859A71146C0479002E853D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C859A87146C0479002E853D /* main.m in Sources */,
+				7C859A8A146C0479002E853D /* WiFiCtrlAppDelegate.m in Sources */,
+				7C859A90146C0479002E853D /* FirstViewController.m in Sources */,
+				7C859A93146C0479002E853D /* SecondViewController.m in Sources */,
+				7C552F37146C04D7008EF6FE /* AsyncUdpSocket.m in Sources */,
+				7C5D664914B967FF00E16F56 /* MySingleton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7C859A82146C0479002E853D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C859A83146C0479002E853D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7C859A8B146C0479002E853D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C859A8C146C0479002E853D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7C859A94146C0479002E853D /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C859A95146C0479002E853D /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		7C859A97146C0479002E853D /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C859A98146C0479002E853D /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C859A9A146C0479002E853D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7C859A9B146C0479002E853D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		7C859A9D146C0479002E853D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WiFiCtrl/WiFiCtrl-Prefix.pch";
+				INFOPLIST_FILE = "WiFiCtrl/WiFiCtrl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7C859A9E146C0479002E853D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WiFiCtrl/WiFiCtrl-Prefix.pch";
+				INFOPLIST_FILE = "WiFiCtrl/WiFiCtrl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C859A6F146C0479002E853D /* Build configuration list for PBXProject "WiFiCtrl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C859A9A146C0479002E853D /* Debug */,
+				7C859A9B146C0479002E853D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C859A9C146C0479002E853D /* Build configuration list for PBXNativeTarget "WiFiCtrl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C859A9D146C0479002E853D /* Debug */,
+				7C859A9E146C0479002E853D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C859A6C146C0479002E853D /* Project object */;
+}
