@@ -13,14 +13,16 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    sock = [[AsyncUdpSocket alloc] initWithDelegate:self];
- 
-    [sock connectToHost:mySingleton.host onPort:mySingleton.port error:nil];
+    socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [socket beginReceiving:nil];
+    //[socket  bindToPort:55555 error:nil];
+    //[socket enableBroadcast:YES error:nil]; 
+    //[socket receiveWithTimeout:-1 tag:0];
+    //[socket connectToHost:@"192.168.1.15" onPort:2000 error:nil];
+
     
     mySingleton = [MySingleton sharedInstance];
-    
-    NSLog(@"View loaded.");
- 
+
     [super viewDidLoad];
 }
 
@@ -52,6 +54,16 @@
     rtBtn = nil;
     [revBtn release];
     revBtn = nil;
+    fwdDat = nil;
+    [fwdDat release];
+    rgtDat = nil;
+    [rgtDat release];
+    revDat = nil;
+    [revDat release];
+    lftDat = nil;
+    [lftDat release];
+    stpDat = nil;
+    [revDat release];
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -66,33 +78,51 @@
     [stpBtn release];
     [rtBtn release];
     [revBtn release];
+    [fwdDat release];
+    [rgtDat release];
+    [revDat release];
+    [lftDat release];
+    [revDat release];
     [super dealloc];
 }
 
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(id)filterContext {
+    
+    NSData *addTmp = address;
+    //mySingleton.port = port;
+    NSLog(@"Host: %@", addTmp);
+    //NSLog(@"Port: %i", mySingleton.port);
+	NSString *msg = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	if (msg)
+	{
+		NSLog(@"RECV: %@", msg);
+	}
+	else
+	{
+	}
+}
+//Servo commands.  Add error handling if host and/or port are not set.
+
 - (IBAction)fwdBtnDwn {
-//    NSString *tstMsg = @"3";
-//    tstDat = [tstMsg dataUsingEncoding:NSASCIIStringEncoding];
-//    [sock sendData:tstDat withTimeout:-1 tag:0];
-    NSLog(@"%@", mySingleton.host);
-    
-    //Add error handling if host and/or port are not set.
-}
-
-- (IBAction)lftBtnDwn {
-    
-}
-
-- (IBAction)stpBtnDwn {
+    [socket sendData:[@"0" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
     
 }
 
 - (IBAction)rtBtnDwn {
-    
+    [socket sendData:[@"1" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
+}
+
+- (IBAction)revBtnDwn {
+    [socket sendData:[@"2" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];    
+}
+
+- (IBAction)lftBtnDwn {
+    [socket sendData:[@"3" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0]; 
 }
 
 
-- (IBAction)revBtnDwn {
-    
+- (IBAction)stpBtnDwn {
+    [socket sendData:[@"4" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
 }
 
 -(IBAction)btnUp {

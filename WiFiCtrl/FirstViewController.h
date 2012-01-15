@@ -7,18 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AsyncUdpSocket.h"
+#import "GCDAsyncUdpSocket.h"
 #import "MySingleton.h"
 
-@interface FirstViewController : UIViewController <AsyncUdpSocketDelegate> {
+@interface FirstViewController : UIViewController <GCDAsyncUdpSocketDelegate> {
     IBOutlet UIButton *fwdBtn;
     IBOutlet UIButton *lftBtn;
     IBOutlet UIButton *stpBtn;
     IBOutlet UIButton *rtBtn;
     IBOutlet UIButton *revBtn;
-    AsyncUdpSocket *sock;
+    GCDAsyncUdpSocket *listen;
+    GCDAsyncUdpSocket *socket;
     MySingleton *mySingleton;
-    NSData *tstDat;
+    NSData *bcast;
+    NSData *fwdDat;
+    NSData *rgtDat;
+    NSData *revDat;
+    NSData *lftDat;
+    NSData *stpDat;
+    
 }
 
 - (IBAction)fwdBtnDwn;
