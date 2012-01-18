@@ -36,6 +36,10 @@
 		7C859A96146C0479002E853D /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A94146C0479002E853D /* FirstView.xib */; };
 		7C859A99146C0479002E853D /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C859A97146C0479002E853D /* SecondView.xib */; };
 		7C9D152314C2A66000A42E42 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D152214C2A66000A42E42 /* GCDAsyncUdpSocket.m */; };
+		7C9D154114C3A0A700A42E42 /* status_led_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D153D14C3A0A700A42E42 /* status_led_off.png */; };
+		7C9D154214C3A0A700A42E42 /* status_led_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D153E14C3A0A700A42E42 /* status_led_off@2x.png */; };
+		7C9D154314C3A0A700A42E42 /* status_led_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D153F14C3A0A700A42E42 /* status_led_on.png */; };
+		7C9D154414C3A0A700A42E42 /* status_led_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D154014C3A0A700A42E42 /* status_led_on@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,10 @@
 		7C859A98146C0479002E853D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		7C9D152114C2A66000A42E42 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		7C9D152214C2A66000A42E42 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		7C9D153D14C3A0A700A42E42 /* status_led_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_led_off.png; sourceTree = "<group>"; };
+		7C9D153E14C3A0A700A42E42 /* status_led_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status_led_off@2x.png"; sourceTree = "<group>"; };
+		7C9D153F14C3A0A700A42E42 /* status_led_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_led_on.png; sourceTree = "<group>"; };
+		7C9D154014C3A0A700A42E42 /* status_led_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status_led_on@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 		7C552F38146C04E1008EF6FE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C9D153D14C3A0A700A42E42 /* status_led_off.png */,
+				7C9D153E14C3A0A700A42E42 /* status_led_off@2x.png */,
+				7C9D153F14C3A0A700A42E42 /* status_led_on.png */,
+				7C9D154014C3A0A700A42E42 /* status_led_on@2x.png */,
 				7C552F19146C04D7008EF6FE /* 01-arrow-east.png */,
 				7C552F1A146C04D7008EF6FE /* 01-arrow-east@2x.png */,
 				7C552F1B146C04D7008EF6FE /* 03-arrow-south.png */,
@@ -151,18 +163,18 @@
 				7C552F28146C04D7008EF6FE /* AsyncUdpSocket.m */,
 				7C9D152114C2A66000A42E42 /* GCDAsyncUdpSocket.h */,
 				7C9D152214C2A66000A42E42 /* GCDAsyncUdpSocket.m */,
-				7C859A88146C0479002E853D /* WiFiCtrlAppDelegate.h */,
-				7C859A89146C0479002E853D /* WiFiCtrlAppDelegate.m */,
 				7C859A8B146C0479002E853D /* MainWindow.xib */,
 				7C859A8E146C0479002E853D /* FirstViewController.h */,
 				7C859A8F146C0479002E853D /* FirstViewController.m */,
 				7C859A91146C0479002E853D /* SecondViewController.h */,
 				7C859A92146C0479002E853D /* SecondViewController.m */,
+				7C859A88146C0479002E853D /* WiFiCtrlAppDelegate.h */,
+				7C859A89146C0479002E853D /* WiFiCtrlAppDelegate.m */,
+				7C5D664714B967FF00E16F56 /* MySingleton.h */,
+				7C5D664814B967FF00E16F56 /* MySingleton.m */,
 				7C859A94146C0479002E853D /* FirstView.xib */,
 				7C859A97146C0479002E853D /* SecondView.xib */,
 				7C859A80146C0479002E853D /* Supporting Files */,
-				7C5D664714B967FF00E16F56 /* MySingleton.h */,
-				7C5D664814B967FF00E16F56 /* MySingleton.m */,
 			);
 			path = WiFiCtrl;
 			sourceTree = "<group>";
@@ -247,6 +259,10 @@
 				7C552F34146C04D7008EF6FE /* 11-x@2x.png in Resources */,
 				7C552F35146C04D7008EF6FE /* 19-gear.png in Resources */,
 				7C552F36146C04D7008EF6FE /* 19-gear@2x.png in Resources */,
+				7C9D154114C3A0A700A42E42 /* status_led_off.png in Resources */,
+				7C9D154214C3A0A700A42E42 /* status_led_off@2x.png in Resources */,
+				7C9D154314C3A0A700A42E42 /* status_led_on.png in Resources */,
+				7C9D154414C3A0A700A42E42 /* status_led_on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

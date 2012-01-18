@@ -12,16 +12,20 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
-{
-    socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [socket beginReceiving:nil];
-    //[socket  bindToPort:55555 error:nil];
-    //[socket enableBroadcast:YES error:nil]; 
-    //[socket receiveWithTimeout:-1 tag:0];
-    //[socket connectToHost:@"192.168.1.15" onPort:2000 error:nil];
+{ 
+    socket = [[AsyncUdpSocket alloc] initWithDelegate:self];
+    [socket enableBroadcast:YES error:nil];
+    [socket  bindToAddress:@"0.0.0.0" port:55555 error:nil];
+    [socket receiveWithTimeout:-1 tag:0];
+    //[socket sendData:[@"Hello" dataUsingEncoding:NSASCIIStringEncoding] toHost:@"255.255.255.255" port:2000 withTimeout:-1 tag:0];
 
-    
     mySingleton = [MySingleton sharedInstance];
+    mySingleton.host = @"0.0.0.0";
+    mySingleton.port = 0;
+    
+    if (mySingleton.host == @"0.0.0.0") {
+        statusView.image = [UIImage imageNamed:@"status_led_off.png"];
+    }
 
     [super viewDidLoad];
 }
@@ -54,16 +58,6 @@
     rtBtn = nil;
     [revBtn release];
     revBtn = nil;
-    fwdDat = nil;
-    [fwdDat release];
-    rgtDat = nil;
-    [rgtDat release];
-    revDat = nil;
-    [revDat release];
-    lftDat = nil;
-    [lftDat release];
-    stpDat = nil;
-    [revDat release];
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -78,54 +72,101 @@
     [stpBtn release];
     [rtBtn release];
     [revBtn release];
-    [fwdDat release];
-    [rgtDat release];
-    [revDat release];
-    [lftDat release];
-    [revDat release];
     [super dealloc];
 }
 
-- (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(id)filterContext {
+- (BOOL)onUdpSocket:(AsyncUdpSocket *)sock didReceiveData:(NSData *)data withTag:(long)tag fromHost:(NSString *)host port:(UInt16)port
+{
+    mySingleton.host = host;
+    mySingleton.port = port;
     
-    NSData *addTmp = address;
-    //mySingleton.port = port;
-    NSLog(@"Host: %@", addTmp);
-    //NSLog(@"Port: %i", mySingleton.port);
-	NSString *msg = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-	if (msg)
-	{
-		NSLog(@"RECV: %@", msg);
-	}
-	else
-	{
-	}
+    if (mySingleton.host != @"0.0.0.0") {
+        statusView.image = [UIImage imageNamed:@"status_led_on.png"];
+    }
+    
+    unsigned char buffer [data.length];
+    NSMutableData *truncData = [[NSMutableData alloc] init];
+    
+    [data getBytes:buffer range:NSMakeRange(60, 32)];
+    [truncData appendBytes:&buffer length:32];
+     
+    
+//    for (int i = 0; i < data.length; i++) {
+//        [data getBytes:buffer range:NSMakeRange(i, 1)];
+//        if (buffer[i] != 0 && buffer[i+1] != 0) {
+//            [truncData appendBytes:&buffer length:1];
+//        }
+//    }
+    
+    NSString *msg = [[NSString alloc] initWithBytes:truncData.bytes length:truncData.length encoding:1 ];
+    //NSString *msg = [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] autorelease];
+    NSString *search = @"NOT";
+    
+    if ([msg rangeOfString:search].location != NSNotFound) {
+        NSLog(@"%@ found", search);
+    }
+    
+    
+    
+    NSLog(@"%@", msg);
+    
+    NSLog(@"Data: %@",data);
+    
+    NSLog(@"Host: %@", host);
+
+    
+//    //NSString *msg = [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] autorelease];
+//    NSString *msg = [[NSString alloc] initWithBytes:truncData.bytes length:data.length encoding:1];
+//    
+//    int strLen = msg.length;
+//    NSLog(@"String length: %i", strLen);
+//    
+//    NSLog(@"%@", msg);
+//    
+//    if (msg)
+//	{
+//		NSLog(@"RECV: %@", msg);
+//	}
+//	else
+//	{
+//		
+//		NSLog(@"RECV: Unknown message from: %@:%hu", host, port);
+//	}
+    
+    return YES;
 }
+
 //Servo commands.  Add error handling if host and/or port are not set.
 
-- (IBAction)fwdBtnDwn {
-    [socket sendData:[@"0" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
+- (IBAction)fwdBtnDwn 
+{
+    [socket sendData:[@"I" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
     
 }
 
-- (IBAction)rtBtnDwn {
-    [socket sendData:[@"1" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
+- (IBAction)rtBtnDwn 
+{
+    [socket sendData:[@"L" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
 }
 
-- (IBAction)revBtnDwn {
-    [socket sendData:[@"2" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];    
+- (IBAction)revBtnDwn 
+{
+    [socket sendData:[@"M" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];    
 }
 
-- (IBAction)lftBtnDwn {
-    [socket sendData:[@"3" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0]; 
+- (IBAction)lftBtnDwn 
+{
+    [socket sendData:[@"J" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0]; 
 }
 
 
-- (IBAction)stpBtnDwn {
-    [socket sendData:[@"4" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
+- (IBAction)stpBtnDwn 
+{
+    [socket sendData:[@"K" dataUsingEncoding:NSASCIIStringEncoding] toHost:mySingleton.host port:mySingleton.port withTimeout:-1 tag:0];
 }
 
--(IBAction)btnUp {
+-(IBAction)btnUp 
+{
     
 }
 

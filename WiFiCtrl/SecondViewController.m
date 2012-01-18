@@ -17,6 +17,9 @@
 {   
     [hostField setDelegate:self];
     [portField setDelegate:self];
+    
+    hostField.text = mySingleton.host;
+    portField.text = mySingleton.port;  
 
     mySingleton = [MySingleton sharedInstance];
          
@@ -71,7 +74,6 @@
 {
     mySingleton.host = hostField.text;
     mySingleton.port = (uint16_t)[portField.text integerValue];
-    NSLog(@"%@", mySingleton.host);
 }
 
 @end
